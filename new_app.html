@@ -9,8 +9,8 @@
 		<input type="text" ng-model="item_desc">
 
 		<ul>
-			<li ng-repeat="task in all_tasks | filter: item_desc">
-			{{task.description | reverse}}
+			<li ng-repeat="task in all_tasks | filter: item_desc | orderBy:'-description'  | limitTo: 10 ">
+			{{task.description | reverse | uppercase}}
 			</li>
 		</ul>
 

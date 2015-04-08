@@ -1,5 +1,6 @@
 var tasks= angular.module('tasksApp', [])
 
+//controller
 tasks.controller("TasksController", function($scope, TaskFactory){
 	$scope.all_tasks = TaskFactory.list;
 	$scope.new_task = {}
@@ -9,6 +10,7 @@ tasks.controller("TasksController", function($scope, TaskFactory){
 	}
 })
 
+//model
 tasks.factory("TaskFactory", function(){
 	var items = {
 		list: [
